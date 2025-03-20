@@ -302,7 +302,7 @@ A &amp;= \frac{a}{1 + ab} = \frac{1}{b} \cdot \frac{1}{1 + 1/(ab)} = \\
 </ul>
 <p>Although physically unattainable the limit <span class="math inline">\(L \rightarrow \infty\)</span> represent the ideal condition:</p>
 <p><span class="math display">\[
-A_{ideal} \equiv A_ \infty = \lim\limits_{L \to \infty} A = \frac{1}{b}
+A_{ideal} = \lim\limits_{L \to \infty} A = \frac{1}{b}
 \]</span></p>
 <p>Key result: when the loop gain <span class="math inline">\(L\)</span> is large, the closed loop gain <span class="math inline">\(A\)</span> approaches the ideal closed loop gain <span class="math inline">\(A_{ideal}\)</span>, which is equal to <span class="math inline">\(1/b\)</span></p>
 <p>To achieve gain we need <span class="math inline">\(b \leq 1\)</span>.</p>
@@ -1892,7 +1892,7 @@ R_{gs} = R_{gs}(g_m=0) \cdot \dfrac{1+T_{sc}}{1+T_{open}} = \dfrac{R_i+R_G}{1+g_
 <li>Return-ratio analysis is often simpler than two-port analayis</li>
 <li>Return-ratio analysis uses equations that are independent of the type of feedback.</li>
 <li>Two-port analysis uses four-feedback configurations (series-series, series-shunt, shunt-series, and shunt-shunt), therefore, the type of feedback must be correctly identified before starting the analysis</li>
-<li>In practice, all physical networks are multiloop feedback structures. Unwanted local return loops exists around individual transistor through the parasitic capacitances <span class="citation" data-cites="kundert">(<a href="#ref-kundert" role="doc-biblioref">Tian et al. 2001</a>)</span>. Dealing with multiple feedback mechanisms makes identifying an appropriate controlled source to use for the return ratio analysis more difficult. When dealing with multiloop feedback structures, the controlled source used to compute the return ratio, must be one that breaks the loop globally <span class="citation" data-cites="lewis">(<a href="#ref-lewis" role="doc-biblioref">Hurst and Lewis 1995</a>)</span>.</li>
+<li>In practice, all physical networks are multiloop feedback structures. Unwanted local return loops exists around individual transistor through the parasitic capacitances <span class="citation" data-cites="kundert">(<a href="#ref-kundert" role="doc-biblioref">Tian et al. 2001</a>)</span> <span class="citation" data-cites="andreani">(<a href="#ref-andreani" role="doc-biblioref">Behmanesh and Andreani 2023</a>)</span>. Dealing with multiple feedback mechanisms makes identifying an appropriate controlled source to use for the return ratio analysis more difficult. When dealing with multiloop feedback structures, the controlled source used to compute the return ratio, must be one that breaks the loop globally <span class="citation" data-cites="lewis">(<a href="#ref-lewis" role="doc-biblioref">Hurst and Lewis 1995</a>)</span>.</li>
 <li>One aspect that is often cause of confusion, about return-ratio analysis and two-port analysisis is that the loop gain L computed through two-port analysis and the loop gain T computed using the return ratio, can be different. This is because they are intrinsically two different measures of transmission, however both methods lead to correct closed-loop expressions and both can be used to check stability <span class="citation" data-cites="chiu">(<a href="#ref-chiu" role="doc-biblioref">Chiu 2012</a>)</span>.</li>
 </ul>
 <p><strong>Example 15 - Voltage gain and output resistance of common source with degeneration using return ratio</strong></p>
@@ -2016,6 +2016,9 @@ R_{out} &amp;= R_{out}(g_m=0) \cdot \dfrac{1 + T_{sc}}{1 + T_{open}} = (R_S + r_
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-andreani" class="csl-entry" role="listitem">
+Behmanesh, Baktash, and Pietro Andreani. 2023. <span>“On the Calculation and Simulation of Loop Gain in Feedback Circuits.”</span> <em>IEEE Transactions on Circuits and Systems II: Express Briefs</em> 70 (11): 4033–37. <a href="https://doi.org/10.1109/TCSII.2023.3284669">https://doi.org/10.1109/TCSII.2023.3284669</a>.
+</div>
 <div id="ref-chiu" class="csl-entry" role="listitem">
 Chiu, Yun. 2012. <span>“Demystifying Bilateral Feedback Analysis.”</span> In <em>2012 IEEE 11th International Conference on Solid-State and Integrated Circuit Technology</em>, 1–4. <a href="https://doi.org/10.1109/ICSICT.2012.6467588">https://doi.org/10.1109/ICSICT.2012.6467588</a>.
 </div>
