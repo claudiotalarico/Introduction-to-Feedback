@@ -1,0 +1,27 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+
+format:
+  html:
+    toc: true
+    fig-align: center
+    lang: en-US
+    number-sections: true
+    toc-expand: 2
+
+  pdf:
+    toc: true
+    fig-align: center
+    lang: en-US
+    number-sections: true
+    pdf-engine: xelatex
+    include-in-header:
+      - text: \usepackage{cancel}
+
+citation: true
+
+bibliography:
+  - fb.bib
